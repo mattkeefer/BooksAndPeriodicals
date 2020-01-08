@@ -12,6 +12,7 @@ import BreezySwing.*;
 public class GUI extends GBFrame {
 	JButton addBookButton = addButton("Add Book", 1,1,1,1);
 	JButton viewButton = addButton("View Books", 1,2,1,1);
+	Library lib = new Library();
 	
 	public static void main(String[] args) {
 		JFrame frm = new GUI();
@@ -24,18 +25,18 @@ public class GUI extends GBFrame {
 	public void buttonClicked(JButton button) {
 		if(button==addBookButton) {
 			try {
-				addDlg ad = new addDlg(this);
+				addDlg ad = new addDlg(this, lib);
 			}
 			catch(FormatException e) {
-				
+				messageBox(e.getMessage());
 			}
 		}
 		if(button==viewButton) {
 			try {
-				viewDlg vd = new viewDlg(this);
+				viewDlg vd = new viewDlg(this, lib);
 			}
 			catch(FormatException e) {
-				
+				messageBox(e.getMessage());
 			}
 		}
 	}

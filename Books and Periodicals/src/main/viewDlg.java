@@ -4,13 +4,15 @@ import java.awt.Color;
 import javax.swing.JFrame;
 
 public class viewDlg extends GBDialog {
+	
+	Library l;
 
-	public viewDlg(JFrame frm) throws FormatException {
+	public viewDlg(JFrame frm, Library lib) throws FormatException {
 		super(frm);
-		frm.getContentPane().setBackground(new Color(79, 194, 121).darker());
-		
-		frm.setTitle("View Items");
-		frm.setSize(500, 400);
-		frm.setVisible(true);
+		l = lib;
+		getContentPane().setBackground(new Color(79, 194, 121).darker());
+		setTitle("View Items");
+		setSize(500, 400);
+		setVisible(true);
 	}
 }
