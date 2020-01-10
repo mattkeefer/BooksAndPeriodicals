@@ -24,7 +24,7 @@ public class Periodical extends Item {
 
 	@Override
 	public String print() {
-		return null;
+		return getTitle() + "\n" + getIssue();
 	}
 
 	

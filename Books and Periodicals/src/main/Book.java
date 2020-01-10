@@ -24,7 +24,7 @@ public class Book extends Item {
 
 	@Override
 	public String print() {
-		return null;
+		return getTitle() + "\n" + getAuthor();
 	}
 
 	
