@@ -1,7 +1,7 @@
 /*
  * Matt Keefer
  * Books and Periodicals
- * 1/5/20
+ * 1/15/20
  */
 package main;
 import java.awt.Color;
@@ -48,6 +48,5 @@ public class GUI extends GBFrame {
 		lib.add(new Periodical("Sports Illustrated", 345));
 		lib.add(new Periodical("Sports Illustrated", 646));
 		lib.add(new Periodical("National Geographic", 345));
-
 	}
 }

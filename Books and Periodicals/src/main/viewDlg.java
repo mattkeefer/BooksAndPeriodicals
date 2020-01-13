@@ -51,4 +51,12 @@ public class viewDlg extends GBDialog {
 	public void listItemSelected(JList<String> li) {
 		info.setText(l.getItem(li.getSelectedIndex()).print());
 	}
+	
+	public void listDoubleClicked(JList<String> li) {
+		for(Item i : l.getItems()) {
+			if(i != l.getItem(li.getSelectedIndex())) {
+				
+			}
+		}
+	}
 }
