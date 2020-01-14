@@ -1,6 +1,7 @@
 package main;
 import BreezySwing.*;
 import java.awt.Color;
+import java.awt.Font;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -19,6 +20,7 @@ public class viewDlg extends GBDialog {
 			throw new FormatException("There are no items in the library.");
 		}
 		resetList();
+		info.setFont(new Font("Arial", Font.TRUETYPE_FONT, 16));
 		info.setEditable(false);
 		getContentPane().setBackground(new Color(79, 194, 121).darker());
 		setTitle("View Items");
@@ -52,10 +54,15 @@ public class viewDlg extends GBDialog {
 		info.setText(l.getItem(li.getSelectedIndex()).print());
 	}
 	
-	public void listDoubleClicked(JList<String> li) {
+	public void listDoubleClicked(JList<String> li, String selectedObj) {
 		for(Item i : l.getItems()) {
 			if(i != l.getItem(li.getSelectedIndex())) {
-				
+				try {
+					i.compareTo(l.getItem(li.getSelectedIndex()));
+				}
+				catch(ClassCastException e) {
+					//do nothing
+				}
 			}
 		}
 	}

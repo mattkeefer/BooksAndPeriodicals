@@ -19,13 +19,20 @@ public class Periodical extends Item {
 
 	@Override
 	public int compareTo(Object obj) {
-		return 0;
+		if(((Periodical)obj).getIssue()==getIssue()) {
+			System.out.println("0");
+			return 0;
+		}
+		if(((Periodical)obj).getIssue()>=getIssue()) {
+			System.out.println("1");
+			return 1;
+		}
+		System.out.println("-1");
+		return -1;
 	}
 
 	@Override
 	public String print() {
 		return getTitle() + "\n" + getIssue();
-	}
-
-	
+	}	
 }
