@@ -33,6 +33,6 @@ public class Periodical extends Item {
 
 	@Override
 	public String print() {
-		return getTitle() + "\n" + getIssue();
+		return getTitle() + " - " + getIssue();
 	}	
 }

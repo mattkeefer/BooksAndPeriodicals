@@ -9,10 +9,10 @@ import javax.swing.*;
 import BreezySwing.*;
 
 public class GUI extends GBFrame {
-	JButton addBookButton = addButton("Add Book", 1,1,1,1);
-	JButton viewButton = addButton("View Books", 1,2,1,1);
+	JButton addBookButton = addButton("Add Item", 1,1,1,1);
+	JButton viewButton = addButton("View Items", 1,2,1,1);
 	Library lib = new Library();
-	JMenuItem pop = addMenuItem("Reeee", "Populate");
+	JMenuItem pop = addMenuItem("Populate", "Fill");
 	
 	public static void main(String[] args) {
 		JFrame frm = new GUI();
@@ -41,6 +41,7 @@ public class GUI extends GBFrame {
 		}
 	}
 	
+	//populates library for easy test data
 	public void menuItemSelected(JMenuItem menuItem) {
 		lib.add(new Book("Dictionary", "Webster"));
 		lib.add(new Book("Grapes of Wrath", "Steinbeck"));

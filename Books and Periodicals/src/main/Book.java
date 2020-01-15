@@ -33,6 +33,6 @@ public class Book extends Item {
 
 	@Override
 	public String print() {
-		return getTitle() + "\n" + getAuthor();
+		return getTitle() + " - " + getAuthor();
 	}
 }
