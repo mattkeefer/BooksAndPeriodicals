@@ -19,10 +19,10 @@ public class Book extends Item {
 	
 	@Override
 	public int compareTo(Object obj) {
-		if(getAuthor()==((Book)obj).getAuthor()) {
+		if(getAuthor().equalsIgnoreCase(((Book)obj).getAuthor())) {
 			return 0;
 		}
-		if(getAuthor().compareTo(((Book)obj).getAuthor()) > 0) {
+		if(getAuthor().toLowerCase().compareTo(((Book)obj).getAuthor().toLowerCase()) > 0) {
 			return -1;
 		}
 		return 1;
