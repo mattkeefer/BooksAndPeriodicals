@@ -20,14 +20,11 @@ public class Book extends Item {
 	@Override
 	public int compareTo(Object obj) {
 		if(getAuthor()==((Book)obj).getAuthor()) {
-			System.out.println("0");
 			return 0;
 		}
 		if(getAuthor().compareTo(((Book)obj).getAuthor()) > 0) {
-			System.out.println("-1");
 			return -1;
 		}
-		System.out.println("1");
 		return 1;
 	}
 
